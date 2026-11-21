@@ -29,3 +29,8 @@ jobs:
 
       - name: Executer les tests
         run: pytest -v
+      - name: Verifier Docker Compose
+        run: docker compose config -q
+
+      - name: Construire l'image Docker
+        run: docker compose build
